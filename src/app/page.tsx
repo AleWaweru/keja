@@ -1,13 +1,18 @@
-"use client"
+import { getServerSession } from "next-auth"
+import { options } from "./api/auth/[...nextauth]/option"
+import UserCard from "@/components/Home/Home"
 
-import { store } from "@/state/store";
-import { Provider } from "react-redux";
-import HomePage from "../components/Home/Home"
 
-export default function Home() {
+export default async function Home() {
+  const session = await getServerSession(options)
+
   return (
-    <Provider store={store}>
-     <HomePage/>
-    </Provider>
-  );
+    <>
+      {session ? (
+        <UserCard user={session?.user} pagetype={"Home"} />
+      ) : (
+        <h1 className="text-5xl">You Shall Not Pass!</h1>
+      )}
+    </>
+  )
 }
