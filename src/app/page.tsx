@@ -11,7 +11,7 @@ export default async function Home() {
       {session ? (
         <UserCard user={session?.user} pagetype={"Home"} />
       ) : (
-        <h1 className="text-5xl">You Shall Not Pass!</h1>
+        <h1 className="text-5xl">You must be logged in</h1>
       )}
     </>
   )
