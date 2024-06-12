@@ -42,7 +42,7 @@ export default function Navbar({ user, pagetype }: Props) {
   };
 
   return (
-    <nav className="bg-blue-200 px-[6rem] py-4 sticky top-0 z-50">
+    <nav className="bg-blue-600 px-[6rem] py-4 sticky top-0 z-50">
       <ul className="flex justify-between items-center text-xl font-bold">
         <li><Link href="/">Comfort Home</Link></li>
         {user ? (

@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import { User, Edit, PlusCircle, Trash2, LogOut } from 'lucide-react';
-import Image from 'next/image';
 import { signOut } from 'next-auth/react';
 import ProfilePage from '@/components/Profile/Profile';
 import CreatePost from '@/components/Post/CreatePost';
